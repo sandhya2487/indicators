@@ -1,0 +1,18 @@
+CountryName,CountryCode,IndicatorName,IndicatorCode,Value,Year
+Iceland,ISL,"Survival to age 65, female (% of cohort)",SP.DYN.TO65.FE.ZS,1960,83.75359
+Iceland,ISL,"Survival to age 65, male (% of cohort)",SP.DYN.TO65.MA.ZS,1960,74.27146
+Iceland,ISL,Terms of trade adjustment (constant LCU),NY.TTF.GNFS.KN,1960,-11653459145
+Iceland,ISL,"Total reserves (includes gold, current US$)",FI.RES.TOTL.CD,1960,12332400
+Iceland,ISL,Total reserves minus gold (current US$),FI.RES.XGLD.CD,1960,11300000
+Iceland,ISL,Trade (% of GDP),NE.TRD.GNFS.ZS,1960,86.83569344
+Iceland,ISL,Urban population,SP.URB.TOTL,1960,140986
+Iceland,ISL,Urban population (% of total),SP.URB.TOTL.IN.ZS,1960,80.3
+Iceland,ISL,Urban population growth (annual %),SP.URB.GROW,1960,2.63976032
+India,IND,"Adolescent fertility rate (births per 1,000 women ages 15-19)",SP.ADO.TFRT,1960,103.938
+India,IND,Age dependency ratio (% of working-age population),SP.POP.DPND,1960,76.5595381
+India,IND,"Age dependency ratio, old (% of working-age population)",SP.POP.DPND.OL,1960,5.403730447
+India,IND,"Age dependency ratio, young (% of working-age population)",SP.POP.DPND.YG,1960,71.15580765
+India,IND,"Agriculture, value added (% of GDP)",NV.AGR.TOTL.ZS,1960,42.56113077
+India,IND,"Agriculture, value added (constant 2005 US$)",NV.AGR.TOTL.KD,1960,47368084618
+India,IND,"Agriculture, value added (constant LCU)",NV.AGR.TOTL.KN,1960,3.90E+12
+India,IND,"Agriculture, value added (current LCU)",NV.AGR.TOTL.CN,1960,72564597600

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="http://getbootstrap.com/examples/justified-nav/justified-nav.css" rel="stylesheet">
+
+    <style>
+        .axis path {
+            fill: none;
+            stroke: #777;
+            shape-rendering: crispEdges;
+        }
+        .axis text {
+            font-family: Lato;
+            font-size: 13px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="jumbotron">
+
+
+            <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+            <script>
+
+                  /*  var data = [{
+                        "sale": "152",
+                        "year": "1960"
+                    }, {
+                        "sale": "189",
+                        "year": "1967"
+                    }, {
+                        "sale": "179",
+                        "year": "1974"
+                    }, {
+                        "sale": "199",
+                        "year": "1976"
+                    }, {
+                        "sale": "134",
+                        "year": "1977"
+                    }, {
+                        "sale": "176",
+                        "year": "1980"
+                    }];
+                    var vis = d3.select("#visualisation"),
+                        WIDTH = 1000,
+                        HEIGHT = 500,
+                        MARGINS = {
+                            top: 20,
+                            right: 20,
+                            bottom: 20,
+                            left: 50
+                        },
+                        xScale = d3.scale.linear().range([MARGINS.left, WIDTH - MARGINS.right]).domain([1960, 1980]),
+                        yScale = d3.scale.linear().range([HEIGHT - MARGINS.top, MARGINS.bottom]).domain([134, 215]),
+                        xAxis = d3.svg.axis()
+                        .scale(xScale),
+                        yAxis = d3.svg.axis()
+                        .scale(yScale)
+                        .orient("left");
+
+                    vis.append("svg:g")
+                        .attr("class", "x axis")
+                        .attr("transform", "translate(0," + (HEIGHT - MARGINS.bottom) + ")")
+                        .call(xAxis);
+                    vis.append("svg:g")
+                        .attr("class", "y axis")
+                        .attr("transform", "translate(" + (MARGINS.left) + ",0)")
+                        .call(yAxis);
+                    var lineGen = d3.svg.line()
+                        .x(function(d) {
+                            return xScale(d.year);
+                        })
+                        .y(function(d) {
+                            return yScale(d.sale);
+                        })
+                        .interpolate("basis");
+                    vis.append('svg:path')
+                        .attr('d', lineGen(data))
+                        .attr('stroke', 'green')
+                        .attr('stroke-width', 2)
+                        .attr('fill', 'none');
+                    vis.append('svg:path')
+                        .attr('d', lineGen(data2))
+                        .attr('stroke', 'blue')
+                        .attr('stroke-width', 2)
+                        .attr('fill', 'none');
+                }
+                InitChart();*/
+
+
+                d3.json("India.json",function (data) {
+                var  width = 1000,
+                     height = 500,
+                     margin = {
+                                 top: 20,
+                                 right: 20,
+                                 bottom: 20,
+                                 left: 15
+                                };
+
+  //svg element
+                  var svg=d3.select("body").append("svg")
+                          .attr("width",width+margin.left+margin.right)
+                          .attr("height",height+margin.top+margin.bottom)
+                          .append("g")
+                             .attr("transform","translate("+margin.left+","+margin.top+")");
+  //scaling
+                  xScale = d3.scale.linear().range([margin.left, width - margin.right]).domain([1960, 1980]),
+                  yScale = d3.scale.linear().range([height - margin.top, margin.bottom]).domain([134, 215]),
+                  xAxis = d3.svg.axis()
+                  .scale(xScale),
+                  yAxis = d3.svg.axis()
+                  .scale(yScale)
+                  .orient("left");
+
+                svg.append("svg:g")
+                  .attr("class", "x axis")
+                  .attr("transform", "translate(0," + (height - margin.bottom) + ")")
+                  .call(xAxis);
+                svg.append("svg:g")
+                  .attr("class", "y axis")
+                  .attr("transform", "translate(" + (margin.left) + ",0)")
+                  .call(yAxis);
+
+//genrating line
+                var lineGen = d3.svg.line()
+                .x(function(d) {
+                return xScale(d.Year);
+                })
+                .y(function(d) {
+                return yScale(d.Value);
+                });
+     //appending to svg
+              svg.append('svg:path')
+                  .attr('d', lineGen(data))
+                  .attr('stroke', 'green')
+                  .attr('stroke-width', 2)
+                  .attr('fill', 'none');
+
+                });
+            </script>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
