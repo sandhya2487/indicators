@@ -1,0 +1,48 @@
+<!doctype html>
+<html ng-app="app" ng-cloak>
+   <head>
+       <title>This is directive test</title>
+       <link rel="stylesheet" href="f1.css">
+       <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.min.js"></script>
+       <style >
+         [ng\:cloak],[ng-cloak], .ng-cloak{
+           display: none;
+         }
+         </style>
+
+   </head>
+   <body>
+       <div class="container">
+           <div ng-controller="SidebarController" class="sidebar" sidebar-directive="state">
+               <a href="#" id="navigation-toggle" ng-click="toggleState()"><i class="fa fa-users" aria-hidden="true" style="color:black"></i></a>
+             <element ng-hide="!state">
+               <ul class="navigation">
+                   <li class="navigation-items"> <a href="/">Link1</a> </li>
+                   <li class="navigation-items"> <a href="/">Link2</a> </li>
+                   <li class="navigation-items"> <a href="/">Link3</a> </li>
+                   <li class="navigation-items"> <a href="/">Link4</a> </li>
+                   <li class="navigation-items"><a href="/">Link 5</a> </li>
+               </ul>
+             </element>
+           </div>
+
+           <!--getting messages in chat box-->
+           <div ng-controller="mainCtrl">
+            <div class="chatbox" ng-model="txt">
+               <span ng-repeat="msg in message">
+                 {{msg.senderName}}:{{msg.message}}<br>
+               </span>
+
+            </div>
+           </div>
+
+           <div class="chatBox">
+             <textarea id="text" placeholder="Enter your message" rows="2"cols="25"></textarea>
+             <button type="submit" name="button" ng-click="addmessage(msg)">send</button>
+           </div>
+       </div>
+
+   <script src="f1.js"></script>
+   </body>
+</html>

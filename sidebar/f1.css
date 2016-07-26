@@ -1,0 +1,70 @@
+body {
+   font-family : arial;
+}
+.sidebar {
+   position :absolute;
+   margin-top: 20px;
+}
+#navigation-toggle {
+       position : absolute;
+
+       left :0px;
+       color : white;
+}
+.show {
+   left : 0;
+}
+.navigation {
+  position: absolute;
+   list-style : none;
+   padding : 0px;
+   margin-top: 30px;
+   transition-delay: 1000ms;
+
+}
+.navigation-items a {
+   display : block;
+   background-color : #444;
+   color : white;
+   line-height : 2em;
+   text-decoration : none;
+   padding : 10px 30px;
+   width : 100px;
+
+}
+.navigation-items a:hover {
+   background-color : #222;
+}
+.container{
+ border-style: outset;
+ border-color: #f39c12  ;
+ border-width: 5px;
+ width: 300px;
+ height: 400px;
+ margin-left: 400px;
+ position: relative;;
+ margin-top: 20px;
+ background-color:  #f39c12  ;
+ opacity: 0.8;
+}
+.chatBox{
+padding-top: 280px;
+}
+#text{
+ border-style: inset;
+ border-color:  #f39c12  ;
+}
+.btn{
+  position: absolute;
+top: 460px;
+left: 355px;
+width:40px;
+height:30px;
+}
+.message{
+width:350px;
+height:30px;
+position:absolute;
+top:460px;
+left:3px;
+}

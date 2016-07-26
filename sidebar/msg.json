@@ -1,0 +1,73 @@
+{
+  "messages": [
+    {
+      "id": 1,
+      "txt": "hello",
+      "senderName": "sam",
+      "channelId": 1,
+      "type": "text"
+    },
+    {
+      "id": 2,
+      "txt": "when r u going to watch kabbali?",
+      "senderName": "dean",
+      "channelId": 1,
+      "type": "text"
+    },
+    {
+      "id": 3,
+      "txt": "On next weekend",
+      "senderName": "cass",
+      "channelId": 1,
+      "type": "text"
+    },
+    {
+      "id": 4,
+      "txt": "that's great",
+      "senderName": "derek",
+      "channelId": 1,
+      "type": "text"
+    },
+    {
+      "channelId": 3101,
+      "senderName": "Krishna",
+      "type": "text",
+      "id": 5
+    },
+    {
+      "channelId": 3101,
+      "senderName": "Krishna",
+      "type": "text",
+      "txt": "asdas",
+      "id": 6
+    },
+    {
+      "channelId": 3101,
+      "senderName": "Krishna",
+      "type": "text",
+      "txt": "asdas",
+      "id": 7
+    },
+    {
+      "channelId": 3101,
+      "senderName": "Krishna",
+      "type": "text",
+      "txt": "asdsd",
+      "id": 8
+    },
+    {
+      "channelId": 3101,
+      "senderName": "Krishna",
+      "type": "text",
+      "txt": "hjgjhgk",
+      "id": 9
+    },
+    {
+      "channelId": 3101,
+      "senderName": "Krishna",
+      "type": "text",
+      "txt": "hii",
+      "id": 10
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html ng-app="app4" ng-cloak>
+  <head >
+    <meta charset="utf-8">
+    <title>ANG 4</title>
+    <style >
+        [ng\:cloak],[ng-cloak], .ng-cloak{
+          display: none;
+        }
+        .bluetext{
+          color:blue;
+        }
+        .boldtext{
+          font-weight: bold;
+        }
+        .stripedblue{
+          color: #007FFF;
+          background-color: #DBE9F4;
+        }
+        .stripedbeige{
+          color: #CC0000;
+          background-color: #F5F5DC;
+        }
+    </style>
+
+  </head>
+  <body>
+      <div ng-controller="eventCtrl">
+
+          <input ng-blur="blur=blur+1">
+           <h4>Blur Events : {{blur}}</h4>
+
+           <p>
+             <button ng-disabled="disableButton">button</button>
+           </p>
+
+           <p>
+             <input type="checkbox" ng-model="disableButton">
+             DisableButton
+           </p>
+
+           <p>
+             <input type="checkbox" ng-model="dayTimeButton">
+           </p>
+           <p ng-hide="!dayTimeButton">
+               GOOD MORNING
+           </p>
+           <p ng-hide="dayTimeButton">
+             GOOD EVENING
+           </p>
+
+           <p>
+             <select ng-model="textStyling" >
+               <option value="bluetext">blue text</option>
+               <option value="boldtext">boldtext</option>
+             </select>
+           </p>
+           <p ng-class="textStyling">
+                Something creepy is going on.....
+           </p>
+
+           <table>
+             <tr ng-repeat="item in capitals" ng-class-even="'stripedblue'" ng-class-odd="'stripedbeige'" >
+                 <td>
+                   {{item.City}}
+                 </td>
+                 <td>
+                   {{item.State}}
+                 </td>
+             </tr>
+           </table>
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js">
+      </script>
+      <script src="js/ang4.js">
+      </script>
+  </body>
+</html>

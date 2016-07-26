@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="frm" ng-cloak>
+  <head >
+    <meta charset="utf-8">
+    <title></title>
+    <style >
+    [ng\:cloak],[ng-cloak], .ng-cloak{
+      display: none;
+    }
+    input.ng-dirty.ng-invalid{
+      border.color:red;
+    }
+    </style>
+  </head>
+  <body>
+
+    <div ng-controller="frmCtrl">
+
+        <form name="userForm" ng-submit="saveUser(userInfo)">
+           <label>First Name:</label>
+           <input type="text" name="fName" ng-model="userInfo.fName" ng-required="true"  ng-minlength="4">
+           <span class="error-message" ng-show="userForm.fName.$dirty && userForm.fName.$error.required">Must enter your name</span>
+           <span class="error-message" ng-show="userForm.fName.$dirty && userForm.fName.$error.minlength">Minimum length 4</span>
+           <br><br>
+          <label>Last Name:</label>
+          <input type="text" name="lName" ng-model="userInfo.lName"  ng-required="true" ng-minlength="4">
+          <span class="error-message" ng-show="userForm.lName.$dirty && userForm.lName.$error.minlength">minimum length 4</span>
+          <span class="error-message" ng-show="userForm.lName.$dirty && userForm.lName.$error.required">Must enter your lname</span>
+<br><br>
+          <label>Street:</label>
+          <input type="text" name="street" ng-required="true" ng-model="userInfo.street" ng-minlength="6" ng-pattern="/^(\d{3,})\s?(\w{0,5})\s([a-zA-Z]{2,30})\s([a-zA-Z]{2,15})\.?\s?(\w{0,5})$/">
+          <span class="error-message" ng-show="userForm.street.$dirty && userForm.street.$invalid">Must enter a valid address</span>
+<br><br>
+          <label>Subscribe:</label>
+<br><br>
+          <input type="checkbox" name="subscribe" ng-model="userInfo.subscribe" ng-true-value="'Subscribe'" ng-false-value="'Not subscribed'">
+          <label>Delivery method</label>
+          <br><br>
+          <select  name="delivery" ng-model="userInfo.delivery" ng-required="true">
+            <option value="Email">Email</option>
+            <option value="Email">Mail</option>
+          </select>
+<br><br>
+           <input type="submit" value="save" ng-disabled="userForm.$invalid">
+
+        </form>
+
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js">
+    </script>
+    <script src="js/try1.js">
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-cloak>
+<head>
+  <meta charset="utf-8">
+  <title>Excersice</title>
+  <style>
+  [ng\:cloak], [ng-cloak], .ng-cloak {
+    display: none;
+  }
+  </style>
+  <link rel="stylesheet" href="k.css"charset="utf-8">
+  <link href="includes/css/bootstrap-glyphicons.css" rel="stylesheet">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body >
+  <div ng-controller="control1" class="chat" infinite-scroll="loadMore()" infinite-scroll-distance="2">
+    <div >
+
+    </div>
+    <span ng-repeat="message in messages">
+        {{message.name}}:{{message.message}}
+    </span>
+    <form class="" >
+       <input type="text area" name="message" class="message" placeholder="Enter message" ng-model="message">
+       <button class="btn btn-xs btn-success buton" ng-click="sendmessage(message)">
+                <span class="glyphicon glyphicon-send"></span>&nbsp;
+       </button>
+    </form>
+</div>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+  <script src="k.js"></script>
+  <script src="http://code.jquery.com/jquery.js"></script>
+  <script>window.jQuery || document.write('<script src="includes/js/jquery-1.8.2.min.js"><\/script>')</script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script src="includes/js/script.js"></script>
+</body>
+</html>
